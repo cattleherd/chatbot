@@ -37,7 +37,11 @@ export default function Home() {
       const result = await response.json();
       setData(result);
     } catch (err) {
-      alert(err.message);
+      if (err instanceof Error) {
+        alert(err.message);
+      } else {
+        alert('An unexpected error occurred.');
+      }
     }
   };
 
