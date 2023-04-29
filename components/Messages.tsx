@@ -1,10 +1,18 @@
 import { Box, Text } from "@chakra-ui/react";
 import React from "react";
 
+type MessageType = {
+  type: string;
+  message: string;
+};
+
+type MessageListProps = {
+  messages: MessageType[];
+};
 
 //function renders the display of messages (ai generated and user generated)
 
-export default function MessageList({ messages }) {
+export default function MessageList({ messages }: MessageListProps) {
   return (
     <Box>
       {messages.message.map((e, index) =>
