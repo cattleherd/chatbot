@@ -1,9 +1,6 @@
 import { Box, Text } from "@chakra-ui/react";
 import React from "react";
 
-interface MessageListProps {
-  messages: string[];
-}
 
 //function renders the display of messages (ai generated and user generated)
 
