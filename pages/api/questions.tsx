@@ -12,7 +12,7 @@ import {
 
 const limiter = rateLimit({
   windowMs: 60 * 60 * 1000,
-  max: 100,
+  max: 20,
 });
 
 const model = new ChatOpenAI({

@@ -4,7 +4,7 @@ import React from "react";
 
 //function renders the display of messages (ai generated and user generated)
 
-export default function MessageList({ messages }: MessageListProps) {
+export default function MessageList({ messages }) {
   return (
     <Box>
       {messages.message.map((e, index) =>
