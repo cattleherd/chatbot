@@ -16,17 +16,11 @@ import { useRef, useEffect } from "react";
 import MessageList from "@/components/Messages";
 
 export default function Home() {
-  const [messages, setMessages] = useState<{
-    message: Messages[];
-  }>({
+  const [messages, setMessages] = useState({
     //initial state
     message: [{ message: "Wassup ?", type: "aiMessage" }],
   });
 
-  type Messages = {
-    message: string;
-    type: "aiMessage" | "userMessage";
-  };
   const [question, setQuestion] = useState<string>(""); //user question
 
   //scroll to bottom of messages
