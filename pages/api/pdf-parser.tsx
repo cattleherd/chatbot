@@ -6,6 +6,7 @@ import weaviate from "weaviate-ts-client";
 import { WeaviateStore } from "langchain/vectorstores/weaviate";
 import { TokenTextSplitter } from "langchain/text_splitter";
 
+
 // ... (previous imports and configurations)
 
 export default async function handler(
