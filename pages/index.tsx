@@ -113,7 +113,7 @@ export default function Home() {
               },
             }}
           >
-            <MessageList messages={messages} />
+            <MessageList messages={messages.message} />
             <div ref={messagesEndRef} />
           </CardBody>
           <CardFooter>
