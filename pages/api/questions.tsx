@@ -43,7 +43,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
     const userMessage = req.body.question;
     const result = await chain.call({ input: userMessage });
-    const aiResponse = result.response.trim();
+    const aiResponse = result.response;
     res.status(200).json(aiResponse);
+    console.log(aiResponse)
   });
 }
