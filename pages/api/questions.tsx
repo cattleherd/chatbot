@@ -44,7 +44,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     const userMessage = req.body.question;
     const result = await chain.call({ input: userMessage });
     const aiResponse = result.response.trim();
-    console.log(chain.memory.chatHistory.messages);
     res.status(200).json(aiResponse);
   });
 }
