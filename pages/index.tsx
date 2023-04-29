@@ -24,7 +24,7 @@ export default function Home() {
   const [question, setQuestion] = useState<string>(""); //user question
 
   //scroll to bottom of messages
-  const messagesEndRef = useRef(null);
+  const messagesEndRef = useRef<HTMLDivElement | null>(null);
   const scrollToBottom = () => {
     messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
   };
