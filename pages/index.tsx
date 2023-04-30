@@ -18,7 +18,7 @@ import MessageList from "@/components/Messages";
 export default function Home() {
   const [messages, setMessages] = useState({
     //initial state
-    message: [{ message: "Wassup PrettyDon?", type: "aiMessage" }],
+    message: [{ message: "Wattagwan?", type: "aiMessage" }],
   });
 
   const [question, setQuestion] = useState<string>(""); //user question
