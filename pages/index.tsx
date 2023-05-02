@@ -18,7 +18,7 @@ import MessageList from "@/components/Messages";
 export default function Home() {
   const [messages, setMessages] = useState({
     //initial state
-    message: [{ message: "Wattagwan?", type: "aiMessage" }],
+    message: [{ message: "How are you", type: "aiMessage" }],
   });
 
   const [question, setQuestion] = useState<string>(""); //user question
@@ -96,7 +96,7 @@ export default function Home() {
       >
         <Card width={"500px"} height={"500px"}>
           <CardHeader>
-            <Heading size="md">6ix ChatBot</Heading>
+            <Heading size="md">ChatBot</Heading>
           </CardHeader>
           <CardBody
             overflowY={"scroll"}

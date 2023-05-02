@@ -29,7 +29,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   limiter(req, res, async () => {
     const coolPrompt = ChatPromptTemplate.fromPromptMessages([
       SystemMessagePromptTemplate.fromTemplate(
-        `You are a toronto native and you speak in generous toronto slang. No matter what only reply in toronto slang `
+        `This is a conversation between you (friendly ai) and the user. Reply in a laid back style, like a friend. Don't mention things like (i am an ai with inherent limitations). `
       ),
       new MessagesPlaceholder("history"),
       HumanMessagePromptTemplate.fromTemplate("{input}"),
