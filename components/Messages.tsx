@@ -18,7 +18,7 @@ export default function MessageList({ messages }: MessageListProps) {
       {messages.map((e, index) =>
         e.type === "userMessage" ? (
           <Box display={"flex"} justifyContent={"end"}>
-            <Text key={index} backgroundColor={'gray.100'} my={'20px'} px={'10px'} py={'10px'} rounded={'md'} color={'black'}>{e.message}</Text>
+            <Text backgroundColor={'gray.100'} my={'20px'} px={'10px'} py={'10px'} rounded={'md'} color={'black'}>{e.message}</Text>
           </Box>
         ) : (
           <Box display={'flex'}><Text backgroundColor={'gray.600'} px={'10px'} py={'10px'} rounded={'md'} color={'white'} key={index}>{e.message}</Text></Box>         
