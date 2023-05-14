@@ -121,15 +121,6 @@ export default function Home() {
             >
               Query
             </Button>
-            <Button
-              height={"60%"}
-              marginLeft={"20px"}
-              width={"100px"}
-              fontSize={"smaller"}
-              onClick={injestpdf}
-            >
-              Injest pdf
-            </Button>
           </CardFooter>
         </Card>
       </Container>
