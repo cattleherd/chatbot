@@ -18,7 +18,7 @@ import MessageList from "@/components/Messages";
 export default function Home() {
   const [messages, setMessages] = useState({
     //initial state
-    message: [{ message: "I am a simple chatbot, with chatgpt-4 under the hood. Ask me anything!", type: "aiMessage" }],
+    message: [{ message: "I am a simple chatbot, with chatgpt under the hood. Ask me anything!", type: "aiMessage" }],
 
   });
 
