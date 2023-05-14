@@ -16,16 +16,10 @@ import { useRef, useEffect } from "react";
 import MessageList from "@/components/Messages";
 
 export default function Home() {
-<<<<<<< HEAD
-<<<<<<< HEAD
   const [messages, setMessages] = useState({
     //initial state
     message: [{ message: "I am a simple chatbot, with chatgpt-4 under the hood. Ask me anything!", type: "aiMessage" }],
-=======
-  const [messages, setMessages] = useState({
-    //initial state
-    message: [{ message: "How are you", type: "aiMessage" }],
->>>>>>> parent of 9a5d589 (first commit)
+
   });
 
   const [question, setQuestion] = useState<string>(""); //user question
@@ -46,13 +40,6 @@ export default function Home() {
     setQuestion(event.target.value);
   };
 
-<<<<<<< HEAD
-=======
-  const [selectedFile, setSelectedFile] = useState(null);
-  /*
->>>>>>> 9a5d58966d50e79612b68e69f3e8726f09250116
-=======
->>>>>>> parent of 9a5d589 (first commit)
   // Define an async function to fetch data from the API route
   const fetchData = async () => {
     //update ui with user question to be displayed
