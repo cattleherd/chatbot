@@ -76,17 +76,6 @@ export default function Home() {
     }
   };
 
-  const injestpdf = async () => {
-    try {
-      const response = await fetch("/api/pdf-parser", {
-        method: "GET",
-        headers: { "Content-Type": "application/json" },
-      });
-      const result = await response.json();
-    } catch (err) {
-      console.log(err);
-    }
-  };
   return (
     <>
       <Container
