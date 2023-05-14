@@ -18,7 +18,7 @@ import MessageList from "@/components/Messages";
 export default function Home() {
   const [messages, setMessages] = useState({
     //initial state
-    message: [{ message: "How are you", type: "aiMessage" }],
+    message: [{ message: "I am a simple chatbot, with chatgpt-4 under the hood. Ask me anything!", type: "aiMessage" }],
   });
 
   const [question, setQuestion] = useState<string>(""); //user question
@@ -58,7 +58,7 @@ export default function Home() {
       });
       //rate limiting set by openai api
       if (response.status === 429) {
-        throw new Error("You may only send 10 questions per hour");
+        throw new Error("You may only send 20 questions per hour");
       }
       const result = await response.json();
 
