@@ -12,17 +12,24 @@ import {
   Textarea,
 } from "@chakra-ui/react";
 import { useRef, useEffect } from "react";
+import Loader from "@/components/Loader";
 
 import MessageList from "@/components/Messages";
 
 export default function Home() {
   const [messages, setMessages] = useState({
     //initial state
-    message: [{ message: "I am a simple chatbot, with chatgpt under the hood. Ask me anything!", type: "aiMessage" }],
-
+    message: [
+      {
+        message:
+          "I am a simple chatbot, with chatgpt under the hood. Ask me anything!",
+        type: "aiMessage",
+      },
+    ],
   });
 
   const [question, setQuestion] = useState<string>(""); //user question
+  const [loading, setLoading] = useState(false);
 
   //scroll to bottom of messages
   const messagesEndRef = useRef<HTMLDivElement | null>(null);
@@ -42,6 +49,7 @@ export default function Home() {
 
   // Define an async function to fetch data from the API route
   const fetchData = async () => {
+    setLoading(true);
     //update ui with user question to be displayed
     setMessages((prevState) => ({
       message: [
@@ -73,6 +81,8 @@ export default function Home() {
       } else {
         alert("An unexpected error occurred.");
       }
+    } finally {
+      setLoading(false); //set loading false regardless if error or success
     }
   };
 
@@ -93,10 +103,10 @@ export default function Home() {
             sx={{
               "&::-webkit-scrollbar": {
                 width: "8px",
-                pr:"20px",
+                pr: "20px",
                 borderRadius: "8px",
                 backgroundColor: `white`,
-                height:'10px',
+                height: "10px",
               },
               "&::-webkit-scrollbar-thumb": {
                 backgroundColor: `rgba(0, 0, 0, 0.05)`,
@@ -113,14 +123,18 @@ export default function Home() {
               mr={"20px"}
               placeholder="ask a question"
             ></Textarea>
-            <Button
-              height={"60%"}
-              onClick={fetchData}
-              width={"100px"}
-              fontSize={"smaller"}
-            >
-              Query
-            </Button>
+            {loading ? (
+              <Loader/>
+            ) : (
+              <Button
+                height={"60%"}
+                onClick={fetchData}
+                width={"100px"}
+                fontSize={"smaller"}
+              >
+                Query
+              </Button>
+            )}
           </CardFooter>
         </Card>
       </Container>

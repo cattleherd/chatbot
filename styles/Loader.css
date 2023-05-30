@@ -1,0 +1,41 @@
+.loader{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:2px;
+  }
+  
+  .dot{
+    height:10px;
+    width:10px;
+    border-radius:50%;
+  }
+  
+  .dot:nth-child(1){
+    background-color:rgb(200, 200, 200);
+    animation: jump 0.6s 0.5s ease-in infinite
+  }
+  .dot:nth-child(2){
+    background-color:rgb(150, 150, 150);
+    animation: jump 0.6s 0.7s ease-in infinite
+  }
+  .dot:nth-child(3){
+    background-color:rgb(48, 48, 48);
+    animation: jump 0.6s 0.9s ease-in infinite
+  }
+  
+  
+  @keyframes jump{
+    0%{
+      transform: translate3D(0,0,0);
+      opacity: 0;
+    }
+      50%{
+      transform: translate3D(0,-15px,0);
+        opacity: 0.5;
+    }
+      100%{
+      transform: translate3D(0,0,0);
+        opacity: 1;
+    }
+  }
